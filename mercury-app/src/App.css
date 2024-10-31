@@ -1,0 +1,24 @@
+/* Clase ImagenFondo */
+.imagenFondo {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    color: white;
+  }
+  
+  .imagenFondo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('assets/mercury.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(25px);
+    z-index: -1; /* Asegura que el fondo quede detrás del contenido */
+  }
+  
